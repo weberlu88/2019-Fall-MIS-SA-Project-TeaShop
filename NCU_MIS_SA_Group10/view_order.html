@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>我的訂單</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet"><!-- Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- #Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar Bitiş -->
+
+	<style>
+	       /*使用google統一字體 https://fonts.google.com/*/
+
+	</style><!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+<![endif]-->
+	<!--[if IE 7]>
+    
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+        
+        <body class="ie8 lt-ie9 lt-ie10">
+        <![endif]-->
+	<!--[if IE 9]>
+            
+            <body class="ie9 lt-ie10">
+            <![endif]-->
+</head><!-- body的id -->
+<!-- id="title": Login, Register, Administrate的標題 -->
+<body>
+	<!-- Search Icon?-->
+	<div class="ps-search">
+		<div class="ps-search__content">
+			<a class="ps-search__close" href="#"><span></span></a>
+			<form action="do_action" class="ps-form--search-2" method="post">
+				<h3>Enter your keyword</h3>
+				<div class="form-group">
+					<input class="form-control" placeholder="" type="text"> <button class="ps-btn active ps-btn--fullwidth">Search</button>
+				</div>
+			</form>
+		</div>
+	</div><!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+					<img align="left" alt="" src="images/logo.png" width="10%">
+					<ul class="menu">
+						<li>
+							<a href="index_customer.html">Home</a>
+						</li>
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						<li>
+							<a href="buy.html">Order</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="#"><i class="ba-profile"></i></a>
+								<div class="ps-cart__listing">
+									<div class="ps-cart__content">
+										<div class="ps-cart-item">
+											<div class="ps-cart-item__content">
+												<a class="ps-cart-item__title" href="index_customer.html" id="logout">logout</a> <a class="ps-cart-item__title" href="view_order.html">view order</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header><!-- Home 1 products-->
+	<!-- Member's Order -->
+	<div class="ps-section__header" style="align:center">
+		<h3 class="ps-section__title" style="text-align:center">My Order</h3><span style="text-align:center"><img alt="" src="images/icons/floral.png"></span>
+	</div>
+	<div class="ps-home-blog">
+		<div class="ps-container">
+			<table>
+				<tr>
+					<td>
+						<!-- Member's Info -->
+						<div class="card_container" id="card">
+							<div class="my_card">
+								<div class="card__image-container"><img alt="" class="card__image" src="images/user1.jpg"></div><svg class="card__svg" viewbox="0 0 800 500">
+								<path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" fill="#333" stroke="transparent"></path>
+								<path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400" fill="transparent" stroke="yellow" stroke-width="3"></path></svg>
+								<div class="card__content my_text">
+									<h2 class="card__title" id="name">sample name</h2>
+									<p class="my_text"><i class="glyphicon glyphicon-envelope"></i> <span></span><span id="mail">@example.com</span><br>
+									<i class="fas fa-phone"></i> <span></span><span id="phone">sample phone</span><br>
+									<i class="far fa-calendar-alt"></i> <span></span><span id="date">sample date</span><br></p>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div id="order" style="width:100%">
+							<table id="tbl_order" style="width:130%;font-size:20px;">
+								<!-- 這裡是表頭 -->
+								<thead>
+									<tr>
+										<th>狀態</th>
+										<th>訂單編號</th>
+										<th>總價</th>
+										<th>訂單資訊</th>
+										<th>訂購人資料</th>
+									</tr>
+								</thead><!-- 動態填入表格 -->
+								<tbody>
+									<tr>
+										<td>進行中</td>
+										<td>1</td>
+										<td>sample row</td>
+										<td>sample row</td>
+										<td>sample row</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</td>
+				</tr>
+				<tr></tr>
+			</table>
+		</div>
+	</div>
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container"></div>
+		</div>
+	</footer>
+	<div id="back2top">
+		<i class="fa fa-angle-up"></i>
+	</div><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	 
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> <!-- javascript從下面開始 -->
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js">
+	</script> 
+	<script type="text/javascript">
+	   $(document).ready(function () {
+
+	       // Step1. 從Cookies撈會員個資 > 填上card
+	       var user_data = Cookies.get("user_data");
+	       user_data = JSON.parse(user_data);
+	       $('#name').html(user_data.name);
+	       $('#mail').html(user_data.email);
+	       $('#phone').html(user_data.phone);
+	       $('#date').html(user_data.create);
+
+	       // Step2. 從ajax(o) Cookies(x)撈會員訂單 > 填上表格 (如果後來又買東西會取不到訂單)
+	       // var order_data = Cookies.get("order_data");
+	       // order_data = JSON.parse(order_data);
+	       getMemberOrder(user_data.email);
+	       // updateTable(order_data);
+
+	   }); // end of ready()
+
+	   // 沒用的 如過要從java servlet撈資料寫完這個就好
+	   function getMemberOrder(email) {
+
+	       // 將資料組成JSON格式 //因應後端，要用JSONObject物件
+	       var data_object = {
+	           "email": email
+	       };
+	       var data_string = JSON.stringify(data_object); 
+
+	       $.ajax({
+	           type: "POST",
+	           url: "api/viewOrder.do",
+	           data: data_string,
+	           crossDomain: true,
+	           cache: false,
+	           dataType: 'json',
+	           timeout: 5000,
+	           success: function (response) {
+	               console.log(response);
+	               orderList = response.response.order.data
+	               updateTable(orderList);
+	               return true;
+	           },
+	           error: function (response) {
+	               console.log(response);
+	               alert('無法連至伺服器!')
+	           }
+	       });
+	       return false;
+	   } // end getMemberOrder()
+
+	   // 沒有用了 當初測試Cookies.get()用的
+	   function test(){
+	       var order_data = Cookies.get("order_data");
+	       order_data = JSON.parse(order_data);
+	       console.log(order_data);
+
+	       $.each(order_data, function (index, value) {
+	           console.log('index'+index);
+	           console.log('value');
+	           console.log(value);
+	       });
+	   }
+
+	   // 更新訂單表格的方法
+	   function updateTable(data) {
+	       // if 交易狀態 0>進行中, 1>已完成
+	       $("#tbl_order > tbody").empty();
+
+	       //一行一行動態插入訂單至tbody
+	       $.each(data, function (index, value) {
+
+	           console.log(value);
+	           console.log('member_info');
+	           console.log(value.member_info);
+	           console.log('order_info');
+	           console.log(value.order_info);
+	           console.log('product_info');
+	           console.log(value.product_info);
+	           
+
+	           let member_info = value.member_info;
+	           let order_info = value.order_info;
+	           let product_info = value.product_info;
+
+	           let id = order_info.id;
+	           let status = order_info.order_status == 0 ? "進行中" : "已完成"; //交易狀態 0>進行中, 1>已完成
+	           let status_flag = order_info.order_status == 0 ? "0" : "1";
+	           let $stat = $('<span>').text(status);
+	           let $row = $('<tr>');
+
+	           //狀態td + 訂單編號單td
+	           $row.append($('<td>').append($stat).append(" "));
+	           $row.append($('<td>').attr({ "id": id }).text(id));
+
+
+	           //總價td
+	           $row.append($('<td>').text("NT." + order_info.total_price));
+
+	           //多個飲料品項的td
+	           var $items = $('<p>');
+	           var itemArr = product_info;
+	           $.each(itemArr, function (i, v) { //需要product_name size ice suger amount
+	               let $item = $('<div>');
+	               console.log(v);
+	               let tea = v.product_name
+	               $item.append(tea + " " + v.size + " " + v.sugar + v.ice + " x" + v.quantity);
+	               $items.append($item);
+
+	           });
+
+	           $row.append($('<td>').append($items));
+
+	           //顧客資訊td
+	           let cust = member_info;
+	           let $cus = $('<p>')
+	               .append(cust.name + " id=" + cust.id + "<br>" + cust.phone + "<br>" + order_info.address)
+	               .addClass('w3-container');
+	           $row.append($('<td>').append($cus));
+	           
+	           $("#tbl_order > tbody").append($row);
+	       });// end each()
+
+	   }// end updateTable()
+
+	   function setUserCookie(data, flag_login) {
+	       var is_admin = { 'flag': false };
+	       var user_id = data.id;
+	       var user_phone = data.phone;
+	       var user_name = data.name;
+	       var user_data = {
+	           "user_id": user_id,
+	           "name": user_name,
+	           "phone": user_phone,
+	           "login_fiag": flag_login
+	       }
+
+	       Cookies.set("user_data", JSON.stringify(user_data), { expires: 1, path: '' });
+	       Cookies.set("is_admin", JSON.stringify(is_admin), { expires: 1, path: '' });
+	   }
+	   
+	   $("#logout").click(function(){
+	         var user_id = "";
+	         var user_phone = "";
+	         var user_name = "";
+	         var user_data = 
+	         {
+	             "user_id": user_id,
+	             "name": user_name,
+	             "phone": user_phone,
+	             "login_flag": false
+	         }
+	         Cookies.set("user_data", JSON.stringify(user_data), { expires: 7, path: '' });
+	         alert("登出成功")
+	       })
+
+	</script>
+</body>
+</html>

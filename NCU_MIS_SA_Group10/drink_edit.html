@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>編輯商品</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+	</style><!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+	<!--[if IE 7]>
+
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+
+    <body class="ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 9]>
+
+    <body class="ie9 lt-ie10">
+    <![endif]-->
+</head>
+<body>
+	<!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+					<img align="left" alt="" src="images/logo.png" width="10%">
+					<ul class="menu">
+						<li>
+							<a href="index_administrant.html">Home</a>
+						</li>
+						<li>
+							<a href="edit_order.html">view order</a>
+						</li>
+						<li>
+							<a href="edit_member.html">view member</a>
+						</li>
+						<li>
+							<a href="drink_edit.html">alter menu</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="#"><i class="ba-profile"></i></a>
+								<div class="ps-cart__listing">
+									<div class="ps-cart__content">
+										<div class="ps-cart-item">
+											<div class="ps-cart-item__content">
+												<a class="ps-cart-item__title" href="index_customer.html" id="logout">logout</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li><!--<li><a href="#"><i class="ba-profile ">
+                    </i></a></li>-->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header><!-- award-->
+	<!-- Home 1 products-->
+	<div class="ps-home-product bg--cover" data-background="images/bg/home-product.jpg">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title">Our Menu</h3>
+				<p>drinks every day</p><span><!-- 菜單背景圖片 -->
+				 <img alt="" src="images/icons/floral.png"></span> <span class="edit_but" id="add_item_but">新增</span>
+				<div class="row" id="drink_menu">
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">想喝茶</h2>
+						<table class="drink_table" id="tea">
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">找鮮乳</h2>
+						<table class="drink_table" id="milk">
+							<tbody></tbody>
+						</table>
+					</div>
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">手作特調</h2>
+						<table class="drink_table" id="special">
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- home-blog-->
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container"></div>
+		</div>
+	</footer>
+	<div id="back2top">
+		<i class="fa fa-angle-up"></i>
+	</div>
+	<div class="cldetail_window" id="edit_window" style="display: none">
+		<div class="edit-content">
+			<div class="modal-header">
+				<span class="close" id="close_cross">&times;</span>
+				<h2 id="small_id" style="font-size:1px">Modal Header</h2>
+			</div>
+			<div class="modal-body">
+				<div id="small_catagory">
+					<label class="small_label">飲料種類:</label> <select class="custom-select custom-select-lg mb-3" style="font-size:20px">
+						<option class="small_option" value='tea'>
+							想喝茶
+						</option>
+						<option class="small_option" value='milk'>
+							找鮮乳
+						</option>
+						<option class="small_option" value='special'>
+							手作特調
+						</option>
+					</select>
+				</div>
+				<form>
+					<div class="row">
+						<div class="col-md-4">
+							<label class="small_label">飲料名稱:</label> <input class="form-control" id="small_name" name="small_name" type="text">
+						</div>
+						<div class="col-md-4">
+							<label class="small_label">大杯價格:</label> <input class="form-control" id="small_large_price" name="small_large_price" type="text">
+						</div>
+						<div class="col-md-4">
+							<label class="small_label">中杯價格:</label> <input class="form-control" id="small_middle_price" name="small_middle_price" type="text">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="label_button" for="exampleFormControlTextarea1">飲料描述</label> 
+						<textarea class="form-control" id="small_describe" rows="3"></textarea>
+					</div>
+				</form>
+				<div class="small_window_but_group">
+					<button class="small_window_but" id="small_sure" type="button">確定</button> <button class="small_window_but" id="small_cancel" type="button">取消</button>
+				</div>
+			</div>
+		</div>
+	</div><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	 
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/table-to-json@0.13.0/lib/jquery.tabletojson.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js">
+	</script> 
+	<script type="text/javascript">
+	   let menu_th = "<tr><th width='10%'>ID<\/th><th  width='30%'>飲料品項<\/th><th  width='10%'>M<\/th><th  width='10%'>L<\/th><th  width='40%'>描述<\/th><\/tr>";
+
+	   var tea_th="";
+	   var milk_th="";
+	   var special_th="";
+
+	   $(document).ready(function ()
+	   {
+	      getmemnudata();
+	      //新增品項的按鈕事件
+	      $("#add_item_but").click(function ()
+	      {
+	          $("#small_id").text("new_product")
+	          $('input[type=text][name=small_name]').val("");
+	          $('input[type=text][name=small_middle_price]').val("");
+	          $('input[type=text][name=small_large_price]').val("");
+	          $('#small_catagory option[value=tea]').prop('selected', true);
+	          $("#small_describe").val("");
+
+	          modal.style.display = "block";
+	      })
+
+	      //修改小視窗按下確定紐
+	      $("#small_sure").click( function()
+	      {
+	          var sure_edit_name=$('input[type=text][name=small_name]').val();
+	          var sure_large_price=$('input[type=text][name=small_large_price]').val();
+	          var sure_middle_price=$('input[type=text][name=small_middle_price]').val();
+	          var sure_edit_describe=$('#small_describe').val();
+	          var sure_edit_catagory=$("#small_catagory option:selected").text().trim();
+	          var sure_id=$("#small_id").text().toString();
+	          
+	          if(sure_edit_name==""||sure_large_price==""||sure_middle_price==""||sure_edit_catagory=="")
+	           {
+	              alert("欄位不得為空值")
+	           }
+	          else if(sure_large_price<=sure_middle_price)
+	           {
+	              alert("大杯價格不得相等於小於中杯價格")
+	           }
+	          else
+	          {
+	              if(sure_id==="new_product")
+	              {
+	                  var data_object = {
+	                      "drink_name": sure_edit_name,
+	                      "drink_catagory":sure_edit_catagory,
+	                      "middle_price": sure_middle_price,
+	                      "large_price": sure_large_price,
+	                      "describe": sure_edit_describe
+	                  };
+	                  
+	                  var data_string = JSON.stringify(data_object);
+
+	                  $.ajax(
+	                  {
+	                      type: "POST",
+	                      url: "api/product.do",
+	                      data: data_string,
+	                      crossDomain: true,
+	                      cache: false,
+	                      dataType: 'json',
+	                      timeout: 5000,
+	                      success: function (response) 
+	                      {
+	                          console.log(response.message);
+
+	                          if(response.status == 200)
+	                          {
+	                              alert("success")
+	                          }
+	                      },
+	                      error: function () 
+	                      {
+	                          alert("無法連線到伺服器！");
+	                      }
+	                  });
+	              }
+	              else
+	              {
+	                  var data_object = 
+	                  {
+	                      "id":sure_id,
+	                      "drink_name": sure_edit_name,
+	                      "drink_catagory":sure_edit_catagory,
+	                      "middle_price": sure_middle_price,
+	                      "large_price": sure_large_price,
+	                      "describe": sure_edit_describe
+	                  };
+	                  var data_string = JSON.stringify(data_object);
+
+	                  $.ajax(
+	                  {
+	                      type: "PUT",
+	                      url: "api/product.do",
+	                      data: data_string,
+	                      crossDomain: true,
+	                      cache: false,
+	                      dataType: 'json',
+	                      timeout: 5000,
+	                      success: function (response) 
+	                      {
+	                          console.log(response.message);
+	                          if(response.status == 200)
+	                          {
+	                              updateSQLTable(response.response);
+	                          }
+	                      },
+	                      error: function () 
+	                      {
+	                          alert("無法連線到伺服器！");
+	                      }
+	                  });
+	              }
+	              location.reload();
+	              modal.style.display = "none";
+	          }
+	          
+	      });
+
+	      $(".close").click(function ()
+	      {
+	          modal.style.display = "none";
+	      });
+	      $("#small_cancel").click(function ()
+	      {
+	          modal.style.display = "none";
+	      });
+	      
+	      $("#logout").click(function(){
+	             var user_id = "";
+	             var user_phone = "";
+	             var user_name = "";
+	             var user_data = 
+	             {
+	                 "user_id": user_id,
+	                 "name": user_name,
+	                 "phone": user_phone,
+	                 "login_flag": false
+	             }
+	             Cookies.set("user_data", JSON.stringify(user_data), { expires: 7, path: '' });
+	             alert("登出成功")
+	           })
+	      
+	   });
+
+	   //取菜單資料
+	   function getmemnudata()
+	   {
+	      $.ajax(
+	      {
+	          type: "GET",
+	          url: "api/product.do",
+	          crossDomain: true,
+	          cache: false,
+	          dataType: 'json',
+	          timeout: 5000,
+	          success: function (response)
+	          {
+	              milk_th=menu_th;
+	              special_th=menu_th;
+	              tea_th=menu_th;
+	              data=response.response.data;
+	              updateMenu(data);
+
+	              $("#tea > tbody").html(tea_th);
+	              $("#milk > tbody").html(milk_th);
+	              $("#special > tbody").html(special_th);
+
+	              //編輯按鈕相關
+	              $(".drink_detail").click(function ()
+	              {
+	                  var edit_id=$(this).closest("tr").find("td:eq(0)").text();
+	                  var edit_name=$(this).closest("tr").find("td:eq(1)").text();
+	                  var edit_middle_price=$(this).closest("tr").find("td:eq(2)").text();
+	                  var edit_large_price=$(this).closest("tr").find("td:eq(3)").text();
+	                  var edit_describe=$(this).closest("tr").find("td:eq(4)").text();
+	                  var edit_catagory=$(this).closest("table").attr("id");
+
+	                  $("#small_id").text(edit_id)
+	                  $('input[type=text][name=small_name]').val(edit_name);
+	                  $('input[type=text][name=small_middle_price]').val(edit_middle_price);
+	                  $('input[type=text][name=small_large_price]').val(edit_large_price);
+	                  $('#small_catagory option[value='+edit_catagory+']').prop('selected', true);
+	                  $("#small_describe").val(edit_describe);
+
+	                  modal.style.display = "block";
+	              });
+	          },
+	          error: function ()
+	          {
+	              alert("無法連線到伺服器！");
+	          }
+	      });
+	   }
+
+	   //更新菜單品項
+	   function updateMenu(data)
+	   {
+	      console.log(data)
+	      $(".column > tbody").empty();
+	      $(data).each(function (index,element)
+	      {
+	          let row="";
+
+	          row+='<tr class="drink_detail">';
+	          row+="<td>"+element["id"]+"<\/td>";
+	          row+="<td class='drink_name'>"+element["drink_name"]+"<\/td>";
+	          row+="<td>"+element["middle_price"]+"<\/td>";
+	          row+="<td>"+element["large_price"]+"<\/td>";
+	          row+="<td>"+element["describe"]+"<\/td>";
+	          row+="<\/tr>";
+	          switch (element["drink_catagory"])
+	          {
+	              case "想喝茶":
+	              {
+	                  tea_th+=row;
+	                  break;
+	              }
+	              case "找鮮乳":
+	              {
+	                  milk_th+=row;
+	                  break;
+	              }
+	              case "手作特調":
+	              {
+	                  special_th+=row;
+	                  break;
+	              }
+	          }
+	      })
+	   }
+
+	   //////////////////////小視窗相關////////////////////
+	   var modal = document.getElementById("edit_window");
+
+	   window.onclick = function(event) 
+	   {
+	      if (event.target === modal) 
+	      {
+	          modal.style.display = "none";
+	      }
+	   }
+
+	</script>
+</body>
+</html>

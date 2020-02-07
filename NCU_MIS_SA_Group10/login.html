@@ -1,0 +1,704 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>會員專區</title>
+	<script src="https://kit.fontawesome.com/a076d05399.js">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet"><!-- Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- #Dışarıdan Çağırılan Dosyalar Font we Materyal İkonlar Bitiş -->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+<![endif]-->
+	<!--[if IE 7]>
+    
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+        
+        <body class="ie8 lt-ie9 lt-ie10">
+        <![endif]-->
+	<!--[if IE 9]>
+            
+            <body class="ie9 lt-ie10">
+            <![endif]-->
+</head><!-- body的id -->
+<!-- id="title": Login, Register, Administrate的標題 -->
+<body>
+	<!-- Search Icon?-->
+	<div class="ps-search">
+		<div class="ps-search__content">
+			<a class="ps-search__close" href="#"><span></span></a>
+			<form action="do_action" class="ps-form--search-2" method="post">
+				<h3>Enter your keyword</h3>
+				<div class="form-group">
+					<input class="form-control" placeholder="" type="text"> <button class="ps-btn active ps-btn--fullwidth">Search</button>
+				</div>
+			</form>
+		</div>
+	</div><!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+					<img align="left" alt="" src="images/logo.png" width="10%">
+					<ul class="menu">
+						<li>
+							<a href="index_customer.html">Home</a>
+						</li>
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						<li>
+							<a href="buy.html">Order</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="login.html"><i class="ba-profile"></i></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header><!-- login -->
+	<div class="ps-home-product bg--cover" data-background="images/bg/home-product.jpg">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title" id="title">Login</h3>
+				<p>Welcome Nice To meet You</p><span><!-- 菜單背景圖片 -->
+				 <img alt="" src="images/icons/floral.png"></span> <!-- 登入最外部的div -->
+				<div id="tab_containers" style="padding-top: 25px;">
+					<!-- Tab links -->
+					<div class="tab">
+						<button class="tablinks defaultOpen" id="login_tab" onclick="openInput(event, 'login')" value="login">會員登入</button> <button class="tablinks" id="regis_tab" onclick="openInput(event, 'register')" value="register">訪客註冊</button> <button class="tablinks" id="admin_tab" onclick="openInput(event, 'administrate')" value="administrate">管理登入</button>
+					</div><!-- Tab content -->
+					<!-- 會員登入の表單 -->
+					<div class="tabcontent group" id="login">
+						<br>
+						<!-- 錯誤區塊 Bootstrap -->
+						<div class="alert alert-warning" id="login_err" style='display:none;'>
+							<strong>Warning!</strong> <span></span>
+						</div><br>
+						<!-- 輸入區塊 -->
+						<div class="group">
+							<input class="email" id="login_mail" required="" type="text"> <span class="highlight"></span> <span class="bar"></span> <label><i class="far fa-envelope input-ikon"></i> <span class="span-input">Email</span></label>
+						</div>
+						<div class="group">
+							<input class="password" id="login_pwd" required="" type="password"> <span class="highlight"></span> <span class="bar"></span> <label><i class="fas fa-lock input-ikon"></i> <span class="span-input">Password</span></label>
+						</div><a class="login_button" id="btn_login">SUBMIT</a> <!-- <input class="email" placeholder="Email" type="text"><br> -->
+						 <!-- 密碼：<input class="password" placeholder="Password" type="password"><br> -->
+						 <!-- <input class="button" id="btn_login" type="submit" value="SUBMIT"> -->
+					</div><!-- 訪客註冊の表單 -->
+					<div class="tabcontent" id="register">
+						<br>
+						<!-- 錯誤區塊 Bootstrap -->
+						<div class="alert alert-warning" id="rgst_err" style='display:none;'>
+							<strong>Warning!</strong> <span></span>
+						</div><!-- <label>會員註冊</label><br> -->
+						<br>
+						<!-- 輸入區塊 -->
+						<div class="group">
+							<input class="email" id="rgst_mail" required="" type="text"> <span class="highlight"></span> <span class="bar"></span> <label><i class="far fa-envelope input-ikon"></i><span class="span-input">Email</span></label>
+						</div>
+						<div class="group">
+							<input class="password" id="rgst_pwd" required="" type="password"> <span class="highlight"></span> <span class="bar"></span> <label><i class="fas fa-lock input-ikon"></i><span class="span-input">Password</span></label>
+						</div>
+						<div class="group">
+							<input class="name" id="rgst_name" required="" type="text"> <span class="highlight"></span> <span class="bar"></span> <label><i class="far fa-user input-ikon"></i><span class="span-input">Name</span></label>
+						</div>
+						<div class="group">
+							<input class="phone" id="rgst_phone" required="" type="text"> <span class="highlight"></span> <span class="bar"></span> <label><i class="fas fa-phone input-ikon"></i><span class="span-input">Phone</span></label>
+						</div><a class="login_button" id="btn_register">SUBMIT</a> <!-- 
+                    信箱：<input class="email" placeholder="Email" type="text"><br>
+                    密碼：<input class="password" placeholder="Password" type="password"><br>
+                    姓名：<input class="name" placeholder="Name" type="text"><br>
+                    電話：<input class="phone" placeholder="Phone" type="text"><br>
+                    <input class="button" id="btn_register" type="submit" value="SUBMIT">
+                    -->
+					</div><!-- 管理登入の表單 欄位預設鎖死 -->
+					<div class="tabcontent" id="administrate">
+						<!-- <label>管理登入</label><br> -->
+						<br>
+						<br>
+						<div class="group">
+							<input class="email" id="admin_mail" type="text" value="bestsite@prxnhub.com"> <span class="highlight"></span> <span class="bar"></span> <label><i class="far fa-envelope input-ikon"></i><span class="span-input">Email</span></label>
+						</div>
+						<div class="group">
+							<input class="password" id="admin_pwd" type="password" value="123456"> <span class="highlight"></span> <span class="bar"></span> <label><i class="fas fa-lock input-ikon"></i><span class="span-input">Password</span></label>
+						</div><a class="login_button" id="btn_administrate">SUBMIT</a> <!-- 
+                    信箱：<input class="email" disabled type="text" value="bestsite@prxnhub.com"><br>
+                    密碼：<input class="password" disabled type="password" value="123456"><br>
+                    <input class="button" id="btn_administrate" type="submit" value="SUBMIT">
+                    -->
+					</div>
+				</div><!-- End of Tab content -->
+			</div>
+		</div>
+	</div>
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container"></div>
+		</div>
+	</footer>
+	<div id="back2top">
+		<i class="fa fa-angle-up"></i>
+	</div><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	 
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> <!-- javascript從下面開始 -->
+	 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js">
+	</script> 
+	<script type="text/javascript">
+
+	   // 控制Login Register頁面切換的函數
+	   // 這個函數不能寫在ready()裡面!!! 因為html onclick屬性有reference到(?
+	   function openInput(evt, sectionName) {
+	       console.log('openInput() been called');
+	       var str = sectionName[0].toUpperCase() + sectionName.slice(1);
+	       $('#title').text(str);
+	       // console.log(this);
+	       // console.log($(evt.target)); //can't work > ok!
+	       // var sectionName = $(evt.target).attr('value'); //can't work > ok!
+
+	       // Declare all variables
+	       var i, tabcontent, tablinks;
+
+	       // Get all elements with class="tabcontent" and hide them
+	       tabcontent = document.getElementsByClassName("tabcontent");
+	       for (i = 0; i < tabcontent.length; i++) {
+	           tabcontent[i].style.display = "none";
+	       }
+
+	       // Get all elements with class="tablinks" and remove the class "active"
+	       tablinks = document.getElementsByClassName("tablinks");
+	       for (i = 0; i < tablinks.length; i++) {
+	           tablinks[i].className = tablinks[i].className.replace(" active", "");
+	       }
+
+	       // Show the current tab, and add an "active" class to the button that opened the tab
+	       document.getElementById(sectionName).style.display = "block";
+	       $(this).addClass("active"); //this都沒反應 > 拉出來就ok
+	       $(evt.target).addClass('active'); //自己寫也噴錯 > 拉出來就ok
+	       // evt.currentTarget.className += " active"; //原本的噴錯 > 拉出來就ok
+	   }
+
+	   $(document).ready(function () {
+	       var flag_login = "" // 判斷是否登入的flag
+	       var email = "" // 以下為資料變數
+	       var password = ""
+	       var name = ""
+	       var phone = ""
+	       var address_1 = ""
+	       var address_2 = ""
+
+	       var email_rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+	       var password_rule = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+	       // 送出按鈕的事件
+	       $('#btn_login').on('click', login);
+	       $('#btn_register').on('click', register);
+	       $('#btn_administrate').on('click', administrate);
+
+	       // Tabs的事件 >> 不能加在這裡QAQ，要直接寫在html裡面!!
+	       // $('#login_tab').on('click', openInput(event, 'login'));
+	       // $('#regis_tab').on('click', openInput(event, 'register'));
+
+	       // Get the element with class="defaultOpen" and click on it
+	       $(".defaultOpen").click();
+
+	       /* login() register() administrate 是處理向伺服器登入的function */
+	       function login() {
+	           console.log('login, data sent:');
+	           $('#login_err').hide(); // hide error display block
+	           email = $('#login_mail').val();
+	           password = $('#login_pwd').val();
+
+	           if (!email_rule.test(email)) {
+	               $('#login_err > span').html('Email格式不符！');
+	               $('#login_err').show();
+	           }
+	           else if (password.length < 6) {
+	               $('#login_err > span').html('密碼至少6位數！');
+	               $('#login_err').show();
+	           }
+	           else {
+	               // 將資料組成JSON格式
+	               let data_object = {
+	                   "identity": "member",
+	                   "email": email,
+	                   "password": password
+	               };
+	               // 將JSON格式轉換成字串
+	               console.log(data_object);
+	               var data_string = JSON.stringify(data_object);
+
+	               // 發出POST的AJAX請求，success > 直接轉跳頁面 x flag_login=true showMemberInfo()
+	               $.ajax(
+	                   {
+	                       type: "POST",
+	                       url: "api/login.do",
+	                       data: data_string,
+	                       crossDomain: true,
+	                       cache: false,
+	                       dataType: 'json',
+	                       timeout: 5000,
+	                       success: function (response) {
+	                           if (response.status == 200) { //登入成功
+	                               flag_login = true;
+	                               // 這裡直接轉跳頁面，訂單資訊先用cookie存起來，之後可以在首頁觀看
+	                               console.log('user data:')
+	                               console.log(response.response.data)
+	                               console.log('order data:')
+	                               console.log(response.response.order)
+	                               // showMemberInfo(response.response.order.data);
+	                               // $("#tab_containers").toggle();
+	                               setUserCookie(response.response.data, flag_login);
+	                               setOrderCookie(response.response.order.data, flag_login);
+
+	                               //switch page to HOME
+	                               alert('登入成功!'+'\n'+'您好: '+response.response.data.name);
+	                               window.location.href = "index_customer.html"
+	                           }
+	                           else if (response.status == 400) { //登入失敗 > 顯示錯誤訊息
+	                               console.log(response);
+	                               $('#login_err > span').html(response.message);
+	                               $('#login_err').show();
+	                           }
+	                           else {
+	                               console.log(response);
+	                           }
+	                       },
+	                       error: function (response) {
+	                           console.log(response);
+	                           alert("無法連線到伺服器！");
+
+	                           //這裡後端要回傳error response要一點心力，姑且先放在success()處理error
+	                           // if(response.status == 400) { 
+	                           //  console.log(response);
+	                           //  $('#login_err > span').val(response.message);
+	                           //  $('#login_err > span').toggle;
+	                           // } else {
+	                           //  $('#login_err > span').val("無法連線到伺服器！");
+	                           //  $('#login_err > span').toggle;
+	                           // }
+	                       }
+	                   });
+
+	           }
+	       }
+
+	       function register() {
+	           // 後端檢查Email是否重複 > 重複Email框閃紅燈
+	           // 註冊完 > 重新登入一次
+	           console.log('register, data sent:');
+	           $('#rgst_err').hide(); // hide error display block
+	           email = $('#rgst_mail').val();
+	           password = $('#rgst_pwd').val();
+	           name = $('#rgst_name').val();
+	           phone = $('#rgst_phone').val();
+
+	           if (!email_rule.test(email)) {
+	               $('#rgst_err > span').html('Email格式不符！');
+	               $('#rgst_err').show();
+	           }
+	           else if (password.length < 6) {
+	               $('#rgst_err > span').html('密碼至少6位數！');
+	               $('#rgst_err').show();
+	           }
+	           else if (name.length == 0) {
+	               $('#rgst_err > span').html('請輸入名字！');
+	               $('#rgst_err').show();
+	           }
+	           else if (phone.length == 0) {
+	               $('#rgst_err > span').html('請輸入電話！');
+	               $('#rgst_err').show();
+	           }
+	           else {
+	               // 將資料組成JSON格式
+	               let data_object = {
+	                   "identity": "register",
+	                   "email": email,
+	                   "password": password,
+	                   "name": name,
+	                   "phone": phone
+	               };
+	               // 將JSON格式轉換成字串
+	               console.log(data_object);
+	               var data_string = JSON.stringify(data_object);
+	               // 發出POST的AJAX請求 success > 顯示註冊成功
+	               $.ajax(
+	               {
+	                   type: "POST",
+	                   url: "api/login.do",
+	                   data: data_string,
+	                   crossDomain: true,
+	                   cache: false,
+	                   dataType: 'json',
+	                   timeout: 5000,
+	                   success: function (response) {
+	                       console.log(response);
+	                       if (response.status == 200) {
+	                           flag_login = false;
+
+	                           //switch tab to login > 自動幫她填寫email 密碼要自己打
+	                           alert('註冊成功! 您可以登入了!');
+	                           $('#login_tab').click();
+	                           $('#login_mail').val(email);
+	                           $('#login_pwd').click();
+
+	                           // 清空js端的會員資料
+	                           email = '';
+	                           password = '';
+	                           name = '';
+	                           phone = '';
+	                       }
+	                   },
+	                   error: function () {
+	                       alert("無法連線到伺服器！");
+	                   }
+	               });
+	           }
+	       }
+
+	       function administrate() {
+	           console.log('administrate, data sent:');
+	           email = $('#admin_mail').val();
+	           password = $('#admin_pwd').val();
+
+	           // 將資料組成JSON格式
+	           let data_object = {
+	               "identity": "administrant",
+	               "email": email,
+	               "password": password
+	           };
+	           // 將JSON格式轉換成字串
+	           console.log(email);
+	           console.log(password);
+	           console.log(data_object);
+	           var data_string = JSON.stringify(data_object);
+	           // 發出POST的AJAX請求，success > 顯示登入成功
+
+	           $.ajax(
+	               {
+	                   type: "POST",
+	                   url: "api/login.do",
+	                   data: data_string,
+	                   crossDomain: true,
+	                   cache: false,
+	                   dataType: 'json',
+	                   timeout: 5000,
+	                   success: function (response) {
+	                       console.log(response);
+	                       if (response.status == 200) {
+	                           flag_login = true;
+	                           // server會回傳管理者資料，用cookie儲存起來
+	                           setAdminCookie(response.response.data, flag_login); //回傳data{}的位置跟會員不一樣!
+
+	                           //switch page to HOME
+	                           alert('管理者登入成功!'+'\n'+'您好: '+response.response.data.name);
+	                           window.location.href = "index_administrant.html"
+	                       }
+	                   },
+	                   error: function () {
+	                       alert("無法連線到伺服器！");
+	                   }
+	               });
+
+	       }
+
+	       // info is array[]
+	       function showMemberInfo(info) {
+
+	           $("#tbl_history_order > tbody").empty();
+	           $("#tbl_present_order > tbody").empty();
+
+	           console.log(info);
+	           //一行一行動態插入訂單至tbody
+	           $.each(info, function (index, value) {
+
+	               console.log(value)
+	               let member_info = value.member_info;
+	               let order_info = value.order_info;
+	               let product_info = value.product_info;
+
+	               let id = order_info.id;
+	               let status = order_info.order_status == 0 ? "進行中" : "已完成"; //交易狀態 0>進行中, 1>已完成
+	               let status_flag = order_info.order_status == 0 ? "0" : "1";
+	               let $stat = $('<span>').text(status);
+	               let $row = $('<tr>');
+
+	               //狀態td + 訂單編號單td
+	               $row.append($('<td>').append($stat).append(" "));
+	               $row.append($('<td>').attr({ "id": id }).text(id));
+
+
+	               //總價td
+	               $row.append($('<td>').text("NT." + order_info.total_price));
+
+	               //多個飲料品項的td
+	               var $items = $('<p>');
+	               var itemArr = product_info;
+	               $.each(itemArr, function (i, v) { //需要product_name size ice suger amount
+	                   let $item = $('<div>');
+	                   console.log(v);
+	                   let tea = v.product_name
+
+	                   $item.append(tea + " " + v.size + " " + v.sugar + v.ice + " x" + v.quantity);
+
+	                   $items.append($item);
+
+	               });
+
+	               $row.append($('<td>').append($items));
+
+	               //顧客資訊td
+	               let cust = member_info;
+	               let $cus = $('<p>')
+	                   .append(cust.name + " id=" + cust.id + "<br>" + cust.phone + "<br>" + order_info.address)
+	                   .addClass('w3-container');
+	               $row.append($('<td>').append($cus));
+	               console.log(status_flag)
+	               if (status_flag === "0") {
+	                   $("#tbl_present_order > tbody").append($row);
+	               }
+	               else {
+	                   $("#tbl_history_order > tbody").append($row);
+	               }
+	           });
+
+	           if (flag_login == true) {
+	               $('.for_member').attr("style", "display:block");
+	           }
+	       }
+
+	       function showEmailError() {
+	           // 如果註冊的email重複，警示他重新輸入
+	           $('#register > input.email').toggleClass("error");
+	       }
+	//order:
+	//  data: Array(4)
+	//  0:
+	//      member_info:
+	//          phone: "0987654321"
+	//          name: "雅子"
+	//          id: 1
+	//          __proto__: Object
+	//      product_info: Array(3)
+	//          0: 
+	//              quantity: 5
+	//              size: "large"
+	//              price: 325
+	//              product_id: 11
+	//              ice: "微冰"
+	//              id: 4
+	//              product_name: "仙草凍茶拿鐵"
+	//              sugar: "半糖"
+	//              __proto__: Object
+	//          1: {quantity: 8, size: "large", price: 400, product_id: 19, ice: "去冰", …}
+	//          2: {quantity: 7, size: "middle", price: 245, product_id: 3, ice: "微冰", …}
+	//          length: 3
+	//          __proto__: Array(0)
+	//      order_info:
+	//          member_id: 1
+	//          order_status: 1
+	//          address: "泱泱路69號"
+	//          total_price: 970
+	//          create: "2019-12-31 22:53:54.164"
+	//          id: 15
+	//          creditcard: "到店支付"
+	//          payment_method: "cash"
+	//          __proto__: Object
+	//  1: {member_info: {…}, product_info: Array(1), order_info: {…}}
+	//  2: {member_info: {…}, product_info: Array(1), order_info: {…}}
+	//  3: {member_info: {…}, product_info: Array(1), order_info: {…}}
+
+	       function setOrderCookie(data, flag_login) {
+	           // data: (4) [{…}, {…}, {…}, {…}] ← 只要這個
+	           // row: 4
+	           // time: 2477421600
+	           // sql:
+
+	           // "data":[
+	           //  {
+	           //      "member_info":{"phone":"0987654321","name":"雅子","id":1},
+	           //      "product_info":[
+	           //          {"quantity":5,"size":"large","price":325,"product_id":11,"ice":"微冰","id":4,"product_name":"仙草凍茶拿鐵","sugar":"半糖"},
+	           //          {"quantity":8,"size":"large","price":400,"product_id":19,"ice":"去冰","id":5,"product_name":"冰糖洛神梅","sugar":"半糖"}
+	           //      ],
+	           //      "order_info":{"member_id":1,"order_status":1,"address":"泱泱路69號","total_price":970,"create":"2019-12-31 23:23:43.402","id":15,"creditcard":"到店支付","payment_method":"cash"}
+	           //  }
+	           //  {},
+	           //  ...
+	           // ]
+	           var orderlist = data;
+	           Cookies.set("order_data", JSON.stringify(orderlist), { expires: 1, path: '' });
+	       }
+
+	           // password: "123456"
+	           // isDeleted: false
+	           // phone: "0918000000"
+	           // name: "叉子"
+	           // id: 2
+	           // email: "fork@gmail.com"
+
+	       function setUserCookie(data, flag_login) {
+	           var is_admin = { 'flag': false };
+	           var user_id = data.id;
+	           var user_email = data.email;
+	           var user_phone = data.phone;
+	           var user_name = data.name;
+	           var create = data.create;
+	           var user_data = {
+	               "user_id": user_id,
+	               "email": user_email,
+	               "name": user_name,
+	               "phone": user_phone,
+	               "create": create,
+	               "login_flag": flag_login
+	           }
+
+	           Cookies.set("user_data", JSON.stringify(user_data), { expires: 1, path: '' });
+	           Cookies.set("is_admin", JSON.stringify(is_admin), { expires: 1, path: '' });
+	       }
+
+	       function setAdminCookie(data, flag_login) {
+	           var is_admin = { 'flag': true };
+	           var admin_id = data.id;
+	           var admin_name = data.name;
+	           var admin_data = {
+	               "user_id": admin_id,
+	               "name": admin_name,
+	           }
+
+	           Cookies.set("user_data", JSON.stringify(admin_data), { expires: 7, path: '' });
+	           Cookies.set("is_admin", JSON.stringify(is_admin), { expires: 1, path: '' });
+	       }
+
+	   });
+	</script>
+</body>
+</html>

@@ -1,0 +1,783 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>購買商品</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style>
+	</style><!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+	<!--[if IE 7]>
+
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+
+    <body class="ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 9]>
+
+    <body class="ie9 lt-ie10">
+    <![endif]-->
+</head>
+<body>
+	<!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+				<img align="left" alt="" src="images/logo.png" width="10%">	
+					<ul class="menu">
+						<li>
+							<a href="index_customer.html">Home</a>
+						</li>
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						<li>
+							<a href="buy.html">Order</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="#"><i class="ba-profile"></i></a>
+								<div class="ps-cart__listing">
+									<div class="ps-cart__content">
+										<div class="ps-cart-item">
+											<div class="ps-cart-item__content">
+												<a class="ps-cart-item__title" href="index_customer.html" id="logout">logout</a> 
+												<a class="ps-cart-item__title" href="view_order.html">view order</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header><!-- Home 1 products-->
+	<div class="ps-home-product bg--cover" data-background="images/bg/home-product.jpg">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title">Our Menu</h3>
+				<p>drinks every day</p><span><!-- 菜單背景圖片 -->
+				 <img alt="" src="images/icons/floral.png"></span>
+				<div align="center" class="row">
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">想喝茶</h2>
+						<table class="drink_table" id="tea">
+							<tbody>
+								<tr>
+									<th>飲料品項</th>
+									<th>M</th>
+									<th>L</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">找鮮乳</h2>
+						<table class="drink_table" id="milk">
+							<tbody>
+								<tr>
+									<th>飲料品項</th>
+									<th>M</th>
+									<th>L</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="column">
+						<h2 align="center" style="font-family: KouzanMouhituFontOTF">手作特調</h2>
+						<table class="drink_table" id="special">
+							<tbody>
+								<tr>
+									<th>飲料品項</th>
+									<th>M</th>
+									<th>L</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- home-blog-->
+	<div class="ps-home-blog">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title">Shopping Cart</h3>
+				<p>Live with refreshment</p><span><img alt="" src="images/icons/floral.png"></span>
+				<div id="shopping_cart">
+					<div class="cart_row">
+						<div class="cart_column">
+							<table class="cart_table" id="cart_table">
+								<tbody align="center">
+									<tr>
+										<th>飲料品項</th>
+										<th>大小</th>
+										<th>數量</th>
+										<th>冰度</th>
+										<th>甜度</th>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="cart_column" id="show_total_price">
+							<table id="sure_paid_table">
+								<tr>
+									<th>總金額</th>
+									<th></th>
+									<th></th>
+								</tr>
+								<tr>
+									<td id="total_price">0</td>
+									<td><span class="sure_paid_but" id="sure_pay">確認結帳</span></td>
+									<td><span class="sure_paid_but" id="clear_cart">清空購物車</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container">
+			
+			</div>
+		</div>
+	</footer>
+	<div id="back2top">
+		<i class="fa fa-angle-up"></i>
+	</div>
+	<div class="cldetail_window" id="detail_window" style="visibility:hidden">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close" id="close_cross">&times;</span>
+			</div>
+			<div class="modal-body row-small">
+				<div id="small_name">
+					Test
+				</div>
+				<div class="column-small">
+					<div id="small_size">
+						<input name="size" type="radio" value="large">L <input name="size" type="radio" value="middle">M
+					</div>
+					<div id="small_quantity">
+						<label class="small_label">數量</label>
+						<table>
+							<tr>
+								<td><button class="label_button" id="quantity_decrease">-</button></td>
+								<td id="label_quantity">0</td>
+								<td><button class="label_button" id="quantity_increase">+</button></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="column-small">
+					<div id="small_ice">
+						<ul>
+							<li style="list-style: none"><label class="small_label">冰塊</label></li>
+							<li style="list-style: none"><select class="custom-select custom-select-lg mb-3">
+								<option class="small_option" value='normal'>
+									正常
+								</option>
+								<option class="small_option" value='half'>
+									少冰
+								</option>
+								<option class="small_option" value='alittle'>
+									微冰
+								</option>
+								<option class="small_option" value='none'>
+									去冰
+								</option>
+							</select></li>
+						</ul>
+					</div>
+					<div id="small_sugar">
+						<ul>
+							<li style="list-style: none"><label class="small_label">甜度</label></li>
+							<li style="list-style: none"><select class="custom-select custom-select-lg mb-3">
+								<option class="small_option" value='normal'>
+									正常
+								</option>
+								<option class="small_option" value='half'>
+									半糖
+								</option>
+								<option class="small_option" value='alittle'>
+									微糖
+								</option>
+								<option class="small_option" value='none'>
+									無糖
+								</option>
+							</select></li>
+						</ul>
+					</div>
+				</div>
+				<div class="column-small">
+					<ul>
+						<li style="list-style: none"><label class="small_label">金額:</label></li>
+						<li style="list-style: none; display: inline">
+							<div id="small_total_price" style="text-align: right">
+								0
+							</div>
+							<div class="small_window_but_group">
+								<table>
+									<tr>
+										<td><button class="small_window_but" id="small_sure" onclick="close_data_window()">確定</button></td>
+										<td></td>
+										<td><button class="small_window_but" id="small_cancel">取消</button></td>
+									</tr>
+								</table>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/table-to-json@0.13.0/lib/jquery.tabletojson.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js">
+	</script> 
+	<script type="text/javascript">
+
+	let menu_th = "<tr><th>飲料品項<\/th><th>M<\/th><th>L<\/th><\/tr>";
+	let cart_th = "<tr><th>飲料品項<\/th><th>大小<\/th><th>數量<\/th><th>冰度<\/th>"+
+	   "<th>甜度<\/th><th>金額<\/th><th>刪除<\/th><th>修改<\/th><\/tr>";
+	let cart_content="";
+	let data="";
+	let now_large_price="";
+	let now_middle_price="";
+	let now_size_price="";
+	var tea_th="";
+	var milk_th="";
+	var special_th="";
+
+
+	var user_data = Cookies.get("user_data");
+	user_data = $.parseJSON(user_data);
+
+	if(!user_data.login_flag)
+	{
+	   alert("請先登入")
+	   window.location.href = 'login.html';
+	}
+
+	$.ajax(
+	{
+	   type: "GET",
+	   url: "api/product.do",
+	   crossDomain: true,
+	   cache: false,
+	   dataType: 'json',
+	   timeout: 5000,
+	   success: function (response) 
+	   {
+
+	       milk_th+=menu_th;
+	       special_th+=menu_th;
+	       tea_th+=menu_th;
+	       data=response.response.data;
+	       updateMenu(data);
+	       $("#tea > tbody").html(tea_th);
+	       $("#milk > tbody").html(milk_th);
+	       $("#special > tbody").html(special_th);
+
+	       $(".drink_detail").click(function () 
+	       {
+	           var selected_name="";
+	           now_size_price=$(this).closest("tr").find("td:eq(2)").text();
+	           now_large_price=$(this).closest("tr").find("td:eq(2)").text();
+	           now_middle_price=$(this).closest("tr").find("td:eq(1)").text();
+
+	           selected_name=$(this).closest("tr").find("td:eq(0)").text();
+	           $("#small_name").html(selected_name);
+	           $("#small_size input[value=large]").prop("checked",true);
+	           $("#label_quantity").html("0");
+	           $("#small_total_price").html("0");
+	           $('#small_ice option[value=normal]').prop('selected', true);
+	           $('#small_sugar option[value=normal]').prop('selected', true);
+
+	           $('input[type=radio][name=size]').change(function() 
+	           {
+	               if (this.value == 'large') 
+	               {
+	                   now_size_price=parseInt(now_large_price);
+	                   $("#label_quantity").html("0");
+	                   $("#small_total_price").html("0");
+	               }
+	               else if (this.value == 'middle') 
+	               {
+	                   now_size_price=parseInt(now_middle_price);
+	                   $("#label_quantity").html("0");
+	                   $("#small_total_price").html("0");
+	               }
+	           });
+	           modal.style.visibility= "visible";
+			
+	           
+	       });
+
+
+	       $(".close").click(function () 
+	       {
+	           modal.style.visibility= "hidden";
+	       });
+	       
+	       $("#small_cancel").click(function () 
+	               {
+	    	   modal.style.visibility= "hidden";
+	               });
+
+	       $("#quantity_decrease").click(function () 
+	       {
+	           var   re   =   /^[0-9]*[1-9][0-9]*$/;
+	           var now_quantity="";
+	           var small_window_price=0;
+	           now_quantity=parseInt($(this).closest("tr").find("td:eq(1)").text());
+
+	           if(re.test(now_quantity))
+	           {
+	               now_quantity=now_quantity-1;
+	               $("#label_quantity").html(now_quantity);
+	               small_window_price=now_size_price*now_quantity;
+	               $("#small_total_price").html(small_window_price);
+	           }
+	           else
+	           {
+	               alert("數量不得為零以下")
+	           }
+	       });
+
+	       $("#quantity_increase").click(function () 
+	       {
+	           var small_window_price=0;
+	           var now_quantity="";
+	           now_quantity=parseInt($(this).closest("tr").find("td:eq(1)").text());
+	           now_quantity=now_quantity+1;
+	           $("#label_quantity").html(now_quantity);
+	           small_window_price=now_size_price*now_quantity;
+	           $("#small_total_price").html(small_window_price);
+	       });
+	       /////////////////////////////購物車相關/////////////////////////////
+	       $("#clear_cart").click(function () 
+	       {
+	           var is_clear=confirm("是否清空購物車");
+	           if(is_clear)
+	           {
+	               $("#cart_table > tbody").html(cart_th);
+	               $("#total_price").html(0)
+	           }
+	       });
+	       $("#sure_pay").click(function () 
+	       {
+	           if($("#cart_table td").length!=0)
+	           {
+	               var is_paid=confirm("確定結帳(購物車將清空)??");
+	               if(is_paid)
+	               {
+	                   var total_price=$("#total_price").text();
+	                   
+	                   var table = $('#cart_table').tableToJSON(
+	                   {
+	                       onlyColumns:[0,1,2,3,4,5],
+	                       headings: ['drink_name','drink_size','drink_quantity','drink_ice','drink_sugar','drink_price']
+	                   });
+	                   
+	                   table = {"cart_item": table};
+	                   delete table.cart_item.shift();
+	                   table.total_price=total_price;
+
+	                   Cookies.set("cart_data",JSON.stringify(table),{ expires: 7, path: '' });
+	                   $("#cart_table > tbody").html(cart_th);
+	                   $("#total_price").html(0);
+	                   window.location.href = 'payment.html';
+	               }
+	           }
+	           else
+	           {
+	               alert("購物車不得為零")
+	           }
+	       });
+	   },
+	   error: function () 
+	   {
+	       alert("無法連線到伺服器！");
+	   }
+	});
+
+	/////////////////////////////Menu的函數////////////////////////////
+	function updateMenu(data) 
+	{
+	   $(".column > tbody").empty();
+
+	   $(data).each(function (index,element) 
+	   {
+	       console.log(element);
+
+	       let row="";
+
+	       row+='<tr class="drink_detail" title='+element["describe"]+'>';
+	       row+="<td class='drink_name'>"+element["drink_name"]+"<\/td>";
+	       row+="<td>"+element["middle_price"]+"<\/td>";
+	       row+="<td>"+element["large_price"]+"<\/td>";
+	       row+="<\/tr>";
+	       
+	       switch (element["drink_catagory"]) 
+	       {
+	           case "想喝茶":
+	           {
+	               tea_th+=row;
+	               break;
+	           }
+	           case "找鮮乳":
+	           {
+	               milk_th+=row;
+	               break;
+	           }
+	           case "手作特調":
+	           {
+	               special_th+=row;
+	               break;
+	           }
+	       }
+	       
+	   })
+	}
+
+	//////////////////////小視窗相關////////////////////
+	var modal = document.getElementById("detail_window");
+
+	function close_data_window()
+	{
+	   var select_name=$("#small_name").html();
+	   var select_size=$("input[name='size']:checked").val();
+	   var select_quantity=$("#label_quantity").html();
+	   var select_ice=$("#small_ice option:selected").text();
+	   var select_sugar=$("#small_sugar option:selected").text();
+	   var select_price=$("#small_total_price").html();
+	   var   r   =    /^[0-9]*[1-9][0-9]*$/;
+	   var total_price=0;
+	   if(r.test(select_quantity))
+	   {
+	       let row="";
+	       if (cart_content==="")
+	       {
+	           cart_content+=cart_th;
+	       }
+	       else
+	       {
+	           cart_content=$("#cart_table > tbody").html();
+	       }
+	       row+='<tr class="cart_detail">';
+	       row+="<td class='cart_name'>"+select_name+"<\/td>";
+	       row+="<td class='cart_size'>"+select_size+"<\/td>";
+	       row+="<td class='cart_quantity'>"+select_quantity+"<\/td>";
+	       row+="<td class='cart_ice'>"+select_ice+"<\/td>";
+	       row+="<td class='cart_sugar'>"+select_sugar+"<\/td>";
+	       row+="<td class='cart_price'>"+select_price+"<\/td>";
+	       row+="<td class='clear'><img src='images/icons/delete.png' alt='' style='width:20px; height:20px;'><\/td>";
+	       row+="<td class='edit'><img src='images/icons/pencil.png' alt='' style='width:20px; height:20px;'><\/td>";
+	       row+="<\/tr>";
+	       cart_content+=row;
+	       $("#cart_table > tbody").html(cart_content);
+	       $("#cart_table td").filter(function (index) 
+	       {
+	           var cart_eachprice=0;
+	           if(index%8==5)
+	           {
+	               cart_eachprice=parseInt($('#cart_table td:eq('+index+')').text());
+	               total_price=total_price+cart_eachprice;
+	               total_price=total_price;
+	               $("#total_price").html(total_price);
+	           }
+	       });
+
+	       modal.style.visibility = "hidden";
+	       
+	       //////////////////////刪除按鈕///////////////////////
+	       $(".clear").click(function () 
+	       {
+	           $(this).closest("tr").remove();
+	           cart_content=cart_th;
+	           cart_content+=$("#cart_table > tbody").innerHTML;
+	           total_price=0
+	           $("#cart_table td").filter(function (index) 
+	           {
+	               var cart_eachprice=0;
+	               
+	               if(index%8==5)
+	               {
+	                   cart_eachprice=parseInt($('#cart_table td:eq('+index+')').text());
+	                   total_price=total_price+cart_eachprice;
+	                   total_price=total_price;
+	                   $("#total_price").html(total_price);
+	               }
+	           });
+	       });
+	       //////////////////////編輯按鈕///////////////////////
+	       $(".edit").click(function () 
+	       {
+	           var edit_name="";
+	           var edit_quantity="";
+	           var edit_size="";
+	           var edit_ice_val="";
+	           var edit_sugar_val="";
+	           var edit_price="";
+	           var edit_large_price="";
+	           var edit_middle_price="";
+	           edit_name=$(this).closest("tr").find("td:eq(0)").text();
+	           edit_size=$(this).closest("tr").find("td:eq(1)").text();
+	           edit_quantity=$(this).closest("tr").find("td:eq(2)").text();
+	           edit_ice_val=$(this).closest("tr").find("td:eq(3)").text();
+	           edit_sugar_val=$(this).closest("tr").find("td:eq(4)").text();
+	           edit_price=$(this).closest("tr").find("td:eq(5)").text();
+
+	           $(".drink_table td").filter(function(index)
+	           {
+	               var h=$('.drink_table td:eq('+index+')').text();
+	               if(h===edit_name)
+	               {
+	                   var large_price_index=index+2;
+	                   var middle_price_index=index+1;
+	                   edit_large_price=$('.drink_table td:eq('+large_price_index+')').text();
+	                   edit_middle_price=$('.drink_table td:eq('+middle_price_index+')').text();
+	                   now_large_price=edit_large_price;
+	                   now_middle_price=edit_middle_price;
+	                   if(edit_size==='large')
+	                   {
+	                       now_size_price=now_large_price;
+	                   }
+	                   else if(edit_size==="middle")
+	                   {
+	                       now_size_price=now_middle_price;
+	                   }
+	               }
+	           });
+
+	           switch (edit_ice_val) 
+	           {
+	               case "正常":
+	               {
+	                   edit_ice_val="normal";
+	                   break;
+	               }
+	               case "少冰":
+	               {
+	                   edit_ice_val="half";
+	                   break;
+	               }
+	               case "微冰":
+	               {
+	                   edit_ice_val="alittle";
+	                   break;
+	               }
+	               case  "去冰":
+	               {
+	                   edit_ice_val="none";
+	                   break;
+	               }
+	           }
+
+	           switch (edit_sugar_val) 
+	           {
+	               case "正常":
+	               {
+	                   edit_sugar_val="normal";
+	                   break;
+	               }
+	               case "半糖":
+	               {
+	                   edit_sugar_val="half";
+	                   break;
+	               }
+	               case "微糖":
+	               {
+	                   edit_sugar_val="alittle";
+	                   break;
+	               }
+	               case  "無糖":
+	               {
+	                   edit_sugar_val="none";
+	                   break;
+	               }
+	           }
+
+	           $("#small_name").html(edit_name);
+	           $("#label_quantity").html(edit_quantity);
+	           $('#small_ice option[value='+edit_ice_val+']').prop('selected', true);
+	           $('#small_sugar option[value='+edit_sugar_val+']').prop('selected', true);
+	           $("#small_size input[value="+edit_size+"]").prop("checked",true);
+	           $("#small_total_price").html(edit_price);
+	           modal.style.visibility = "visible";
+	           $('html,body').scrollTop(0);
+	           $(this).closest("tr").remove();
+	       })
+	       /////////////////////////////////////////////////////////
+	   }
+	   else
+	   {
+	       alert("飲料數不得為0!!")
+	   }
+
+	}
+
+	window.onclick = function(event) 
+	{
+	   if (event.target === modal) 
+	   {
+	       modal.style.visibility = "hidden";
+	   }
+	}
+
+
+	$("#logout").click(function(){
+	   var user_id = "";
+	   var user_phone = "";
+	   var user_name = "";
+	   var user_data = 
+	   {
+	       "user_id": user_id,
+	       "name": user_name,
+	       "phone": user_phone,
+	       "login_flag": false
+	   }
+	   Cookies.set("user_data", JSON.stringify(user_data), { expires: 1, path: '' });
+	   alert("登出成功")
+	 })
+
+
+	</script>
+</body>
+</html>

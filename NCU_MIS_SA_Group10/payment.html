@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>付款資料</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<style>
+	</style><!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+    queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+    <![endif]-->
+	<!--[if IE 7]>
+
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+
+    <body class="ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 9]>
+
+    <body class="ie9 lt-ie10">
+    <![endif]-->
+</head>
+<body>
+	<!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+					<img align="left" alt="" src="images/logo.png" width="10%">
+					<ul class="menu">
+						<li>
+							<a href="index_customer.html">Home</a>
+						</li>
+						<li>
+							<a href="menu.html">Menu</a>
+						</li>
+						<li>
+							<a href="buy.html">Order</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="#"><i class="ba-profile"></i></a>
+								<div class="ps-cart__listing">
+									<div class="ps-cart__content">
+										<div class="ps-cart-item">
+											<div class="ps-cart-item__content">
+												<a class="ps-cart-item__title" href="index_customer.html" id="logout">logout</a> <a class="ps-cart-item__title" href="view_order.html">view order</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header><!-- Home 1 products-->
+	<div class="ps-home-product bg--cover" data-background="images/bg/home-product.jpg">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title">Order information</h3>
+				<p>Winter is coming</p><span><!-- 菜單背景圖片 -->
+				 <img alt="" src="images/icons/floral.png"></span>
+				<div class="pay_row">
+					<div class="pay_column" style="text-align:left">
+						<div id="CustomerDataArea">
+							<label class="pay_label">訂購人資料</label><br>
+							<br>
+							訂購人姓名:<input class="name" id="b_name" placeholder="Name" type="text"><br>
+							<br>
+							訂購人電話:<input class="phone" id="b_phone" placeholder="Phone" type="text"><br>
+							<br>
+							訂購人地址:<input class="address" id="b_address" placeholder="address" type="text"><br>
+						</div><br>
+						<br>
+						<div id="paymentDataArea">
+							<label class="pay_label">付款資訊</label><br>
+							<br>
+							<input class="payment" id="pay_by_card" type="radio" value="creditcard">信用卡付款 <input id="cardnumber" placeholder="Cardnumber" type="text"><br>
+							<br>
+							<input class="payment" id="pay_by_cash" type="radio" value="cash">來店現金付款<br>
+							<br>
+						</div><span class="pay_but" id="submit_btn">送出訂單</span>
+					</div>
+					<div class="pay_column" style="text-align:left">
+						<label class="pay_label">購買飲料資料</label><br>
+						<table id="item_table" rules="rows" style="border-bottom:2px black solid;text-align:center">
+							<tbody></tbody>
+						</table><label class="pay_label" id="total_payment">總金額:</label><br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- home-blog-->
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container"></div>
+		</div>
+	</footer>
+	<div id="back2top">
+		<i class="fa fa-angle-up"></i>
+	</div><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	 
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js">
+	</script> 
+	<script type="text/javascript">
+
+	   var member_id="";
+	   var address="";
+	   var pay = " ";
+	   var cart_data="";
+	   var user_data="";
+	   var item_th="<tr><th>飲料品項<\/th><th>大小<\/th><th>數量<\/th><th>冰度<\/th><th>甜度<\/th><th>金額<\/th><\/tr>";
+	   $(document).ready(function ()
+	   {
+	      //取購物車資料
+	      cart_data = Cookies.get("cart_data");
+	      cart_data = $.parseJSON(cart_data);
+	      console.log(cart_data);
+	      updateMenu(cart_data);
+	      //取使用者資料(id)
+	      user_data = Cookies.get("user_data");
+	      user_data = $.parseJSON(user_data);
+	      //user_data = $.parseJSON(user_data);
+	      
+	      member_id=user_data.user_id;
+	      
+	      $('#total_payment').append(cart_data["total_price"]);
+	      
+	      //預設資料
+	      $('#b_name').val(user_data["name"]);
+	      $('#b_phone').val(user_data["phone"]);
+	      //將資料鎖死
+	      $('#b_name').attr("disabled",true);
+	      $('#b_phone').attr("disabled",true);
+	      $('#cardnumber').attr("disabled",true);
+	      
+	      //用卡付
+	      $('#pay_by_card').click(function()
+	      {
+	          $('#cardnumber').attr("disabled",false);
+	          $('#pay_by_cash').attr('disabled',true);
+	          pay = "card";
+	      });
+	      
+	      //現金付
+	      $('#pay_by_cash').click(function()
+	      {
+	          $('#pay_by_card').attr('disabled',true);
+	          pay = "cash"
+	      });
+	      
+	   });
+	   //更新購買飲料資料
+	   function updateMenu(data) 
+	   {
+	      $("#item_table > tbody").empty();
+	      
+	      $(data.cart_item).each(function (index,element) 
+	      {
+	          console.log(element);
+
+	          let row="";
+
+	          row+='<tr>';
+	          row+="<td>"+element["drink_name"]+"<\/td>";
+	          row+="<td>"+element["drink_size"]+"<\/td>";
+	          row+="<td>"+element["drink_quantity"]+"<\/td>";
+	          row+="<td>"+element["drink_ice"]+"<\/td>";
+	          row+="<td>"+element["drink_sugar"]+"<\/td>";
+	          row+="<td>"+element["drink_price"]+"<\/td>";
+	          row+="<\/tr>";
+	          item_th+=row;
+	      })
+	      $("#item_table > tbody").html(item_th);
+	   }
+
+
+	   //送出資料到資料庫ㄉ按鈕
+
+	   $('#submit_btn').click(function()
+	   {
+	      var address=$(".address").val();
+	      var order_data=cart_data;
+	      var cardnum=$("#cardnumber").val();
+	      if(pay==="cash")
+	      {
+	          cardnum="到店支付"
+	      }
+	      
+	      order_data.paymethod=pay;
+	      order_data.member_id=member_id;
+	      order_data.address=address;
+	      order_data.creditcard_number=cardnum;
+	      var pass_valid = validData(order_data);
+
+	      if(pass_valid)
+	      {
+	          var data_string = JSON.stringify(order_data);
+
+	          $.ajax(
+	          {
+	              type: "POST",
+	              url: "api/order.do",
+	              data: data_string,
+	              crossDomain: true,
+	              cache: false,
+	              dataType: 'json',
+	              timeout: 10000,
+	              success: function (response)
+	              {
+	                  alert("成功訂購");
+	                  window.location.href="index_customer.html"
+	              },
+	              error: function ()
+	              {
+	                  alert("無法連線到伺服器！");
+	              }
+	          });    
+	      }
+	      
+	   });
+
+
+	   function validData(data)
+	   {
+	      var phone_rule = /^09\d{8}$/;
+	      
+	      if (data["name"] == ""  || data["phone_number"] == "" || data["address"] == "")
+	      {
+	          alert("必填寫欄位不得有空值！");
+	      }
+	      else
+	      {
+	          return true;
+	      }
+	      
+	      return false;
+	   }
+
+	   $("#logout").click(function(){
+	      var user_id = "";
+	      var user_phone = "";
+	      var user_name = "";
+	      var user_data = 
+	      {
+	          "user_id": user_id,
+	          "name": user_name,
+	          "phone": user_phone,
+	          "login_flag": false
+	      }
+	      Cookies.set("user_data", JSON.stringify(user_data), { expires: 1, path: '' });
+	      alert("登出成功")
+	    })
+	</script>
+</body>
+</html>

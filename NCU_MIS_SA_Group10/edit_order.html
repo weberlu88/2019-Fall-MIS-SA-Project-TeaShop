@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<link href="apple-touch-icon.png" rel="apple-touch-icon">
+	<link href="favicon.png" rel="icon">
+	<meta content="" name="author">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<title>編輯訂單</title>
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script%7CLora:400,700" rel="stylesheet">
+	<link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="plugins/bakery-icon/style.css" rel="stylesheet">
+	<link href="plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet">
+	<link href="plugins/jquery-bar-rating/dist/themes/fontawesome-stars.css" rel="stylesheet">
+	<link href="plugins/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+	<link href="plugins/slick/slick/slick.css" rel="stylesheet">
+	<link href="plugins/lightGallery-master/dist/css/lightgallery.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"><!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media
+queries-->
+	<!--WARNING: Respond.js doesn't work if you view the page via file://-->
+	<!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js">
+    </script>
+    <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js">
+    </script>
+<![endif]-->
+	<!--[if IE 7]>
+    
+    <body class="ie7 lt-ie8 lt-ie9 lt-ie10">
+    <![endif]-->
+	<!--[if IE 8]>
+        
+        <body class="ie8 lt-ie9 lt-ie10">
+        <![endif]-->
+	<!--[if IE 9]>
+            
+            <body class="ie9 lt-ie10">
+            <![endif]-->
+</head>
+<body>
+	<div class="ps-search">
+		<div class="ps-search__content">
+			<a class="ps-search__close" href="#"><span></span></a>
+			<form action="do_action" class="ps-form--search-2" method="post">
+				<h3>Enter your keyword</h3>
+				<div class="form-group">
+					<input class="form-control" placeholder="" type="text"> <button class="ps-btn active ps-btn--fullwidth">Search</button>
+				</div>
+			</form>
+		</div>
+	</div><!-- Header-->
+	<header class="header header--1" data-sticky="true">
+		<nav class="navigation">
+			<div class="ps-container">
+				<div class="navigation__left">
+					<img align="left" alt="" src="images/logo.png" width="10%">
+					<ul class="menu">
+						<li>
+							<a href="index_administrant.html">Home</a>
+						</li>
+						<li>
+							<a href="edit_order.html">view order</a>
+						</li>
+						<li>
+							<a href="edit_member.html">view member</a>
+						</li>
+						<li>
+							<a href="drink_edit.html">alter menu</a>
+						</li>
+						<li>
+							<div class="ps-cart">
+								<a class="ps-cart__toggle" href="#"><i class="ba-profile"></i></a>
+								<div class="ps-cart__listing">
+									<div class="ps-cart__content">
+										<div class="ps-cart-item">
+											<div class="ps-cart-item__content">
+												<a class="ps-cart-item__title" href="index_customer.html">logout</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li><!--<li><a href="#"><i class="ba-profile ">
+                    </i></a></li>-->
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="ps-awards">
+		<div class="ps-container">
+			<div class="ps-section__header">
+				<h3 class="ps-section__title">Edit order</h3>
+				<p>GOOD MORNING GOOD BUSINESS</p><span><img alt="" src="images/icons/floral.png"></span>
+			</div>
+			<div class="ps-section__content">
+				<table align="center" id="edit_order_table" width="85%">
+					<!-- 這裡是標題 -->
+					<caption align="top" style="padding: 8px">
+						<font size="5"><b>所有訂單</b></font><br>
+					</caption><!-- 這裡是表頭 -->
+					<thead style="font-weight: normal">
+						<tr>
+							<th>狀態</th>
+							<th>訂單編號</th>
+							<th>總價</th>
+							<th>訂單資訊</th>
+							<th>會員資料</th>
+						</tr>
+					</thead><!-- 這裡是主表格內容 -->
+					<tbody>
+						<tr align="center">
+							<td>
+								<div>
+									<span class='processing' id='1' style="text-decoration: underline">進行中</span> <a href="javascript:deleteOrder(1);">刪除</a>
+								</div>
+							</td>
+							<td>
+								<p>1</p>
+							</td>
+							<td>
+								<div class="w3-container"></div>
+							</td>
+							<td>
+								<div class="w3-container">
+									<p class="member"></p>
+								</div>
+							</td>
+						</tr>
+						<tr align="center">
+							<td>
+								<div>
+									<span class='complete' id='2'>已完成</span> <a href="javascript:deleteOrder(2);">刪除</a>
+								</div>
+							</td>
+							<td>
+								<p>2</p>
+							</td>
+							<td>
+								<div class="w3-container"></div>
+							</td>
+							<td>
+								<div class="w3-container">
+									<p class="member"></p>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="ps-block--signature" style="padding-top:60px">
+					<div class="ps-block__thumbnail"></div>
+					<div class="ps-block__content"></div>
+				</div>
+			</div>
+		</div>
+	</div><!-- Home 1 products-->
+	<footer class="ps-footer">
+		<div class="ps-footer__content">
+			<div class="ps-container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+						<div class="ps-site-info">
+							<a class="ps-logo" href="index.html"><img alt="" src="images/logo-dark.png"></a>
+							<p>Tart bear claw cake tiramisu chocolate bar gummies dragée lemon drops brownie.</p>
+							<ul class="ps-list--social">
+								<li>
+									<a href="#"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<form class="ps-form--subscribe-offer">
+							<h4>Get news & offer</h4>
+							<div class="form-group">
+								<input class="form-control" placeholder="Your Email..." type="text"> <button>Subscribe</button>
+							</div>
+							<p>* Don't worry, we never spam</p>
+						</form>
+						<div class="ps-footer__contact">
+							<h4>Contact with me</h4>
+							<p>PO Box 16122 Collins Street West,Victoria 8007 Australia</p>
+							<p>(+84 ) 7534 9773, (+84 ) 874 548</p>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+						<div class="ps-footer__open">
+							<h4>Time to Open</h4>
+							<p>Monday - Friday:<br>
+							08:00 am - 08:30 pm<br>
+							Saturday - Sunday:<br>
+							10:00 am - 16:30 pm</p>
+						</div>
+						<ul class="ps-list--payment">
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/visa.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/master-card.png"></a>
+							</li>
+							<li>
+								<a href="#"><img alt="" src="images/payment-method/paypal.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ps-footer__copyright">
+			<div class="container"></div>
+		</div>
+	</footer><!-- Plugins-->
+	<script src="plugins/jquery/dist/jquery.min.js">
+	</script> 
+	<script src="plugins/bootstrap/dist/js/bootstrap.min.js">
+	</script> 
+	<script src="plugins/owl-carousel/owl.carousel.min.js">
+	</script> 
+	<script src="plugins/bootstrap-select/dist/js/bootstrap-select.min.js">
+	</script> 
+	<script src="plugins/jquery-bar-rating/dist/jquery.barrating.min.js">
+	</script> 
+	<script src="plugins/jquery.waypoints.min.js">
+	</script> 
+	<script src="plugins/jquery.countTo.js">
+	</script> 
+	<script src="plugins/jquery.matchHeight-min.js">
+	</script> 
+	<script src="plugins/jquery-ui/jquery-ui.min.js">
+	</script> 
+	<script src="plugins/gmap3.min.js">
+	</script> 
+	<script src="plugins/lightGallery-master/dist/js/lightgallery-all.min.js">
+	</script> 
+	<script src="plugins/slick/slick/slick.min.js">
+	</script> 
+	<script src="plugins/slick-animation.min.js">
+	</script> 
+	<script src="plugins/jquery.slimscroll.min.js">
+	</script> <!-- Custom scripts-->
+	 
+	<script src="js/main.js">
+	</script> 
+	<script src="http://ditu.google.cn/maps/api/js?key=AIzaSyAckIeA7eVaNv2fKmIKl-udHqlZW2tYxME&region=GB">
+	</script> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+	</script> 
+	<script type="text/javascript">
+    $.ajax({
+     	method: "GET",
+     	url: "api/order.do",
+     	data: "",
+     	crossDomain: true,
+     	cache: false,
+     	dataType: 'json',
+     	timeout: 5000,
+     	success: function(response) {
+     		if (response.status == 200) {
+     			var data = response.response.data;
+     			updateTable(data);
+     		}
+     		// 當"進行中"按鈕點擊時，把server中的狀態改為complete，並更新前端按鈕介面
+     		$('.processing').on('click', function(event) {
+     			// 使用ajax向server把訂單改為complete
+     			flag_success = false;
+     			id = $(event.target).attr('id');
+     			flag_success = completeOrder(id);
+     			var data_object = {
+     				"id": id,
+     				"order_status": 1
+     			};
+     			var data_string = JSON.stringify(data_object);
+     			$.ajax({
+     				type: "PUT",
+     				url: "api/order.do",
+     				data: data_string,
+     				crossDomain: true,
+     				cache: false,
+     				dataType: 'json',
+     				timeout: 5000,
+     				success: function(response) {
+     					console.log(response.message);
+     					if (response.status == 200) {
+     						alert("good")
+     					}
+     				},
+     				error: function() {
+     					alert("無法連線到伺服器！");
+     				}
+     			});
+     			// 成功: 更新介面 > 狀態設成已完成
+     			if (flag_success) {
+     				$(event.target).html('已完成');
+     				$(event.target).css({
+     					'text-decoration': ''
+     				});
+     				$(event.target).removeClass('processing').addClass('complete');
+     			}
+     		});
+     	},
+     	error: function() {
+     		alert("無法連線到伺服器！");
+     	}
+     });
+     /* 功能:僅更新所有訂單表格 */
+     function updateTable(info) {
+     	//清除表格內容
+     	$("#edit_order_table > tbody").empty();
+     	console.log(info)
+     	//一行一行動態插入訂單至tbody
+     	var $table_html = $('<tbody>');
+     	$.each(info, function(index, value) {
+     		let member_info = value.member_info
+     		let order_info = value.order_info
+     		let product_info = value.product_info
+     		let id = order_info.id;
+     		let status = order_info.order_status == 0 ? "進行中" : "已完成"; //交易狀態 0>進行中, 1>已完成
+     		let status_class = order_info.order_status == 0 ? "processing" : "complete";
+     		let $row = $('<tr>');
+     		// 第一欄
+     		// <span id='2' class='complete'>已完成<\/span>
+     		let $stat = $('<span>').attr({
+     			"id": id,
+     			"class": status_class
+     		}).text(status);
+     		// <a href="javascript:deleteOrder(2);">刪除<\/a>
+     		let $del = $('<a>').attr({
+     			"href": 'javascript:deleteOrder(' + id + ');'
+     		}).text("刪除");
+     		$row.append($('<td>').append($stat).append(" ").append($del));
+     		// 第二欄 // <td>1<\/td>
+     		$row.append($('<td>').attr({
+     			"id": id
+     		}).text(id));
+     		// 第三欄
+     		$row.append($('<td>').text("NT." + order_info.total_price));
+     		// 第四欄
+     		let $items = $('<p>');
+     		itemArr = product_info;
+     		$.each(itemArr, function(i, v) { //需要product_name size ice suger amount
+     			let $item = $('<div>');
+     			console.log(v);
+     			let tea = v.product_name
+     			$item.append(tea + " " + v.size + " " + v.sugar + v.ice + " x" + v.quantity);
+     			$items.append($item);
+     		});
+     		$row.append($('<td>').append($items));
+     		// 第五欄
+     		let cust = member_info;
+     		let $cus = $('<p>').append(cust.name + " id=" + cust.id + "<br>" + cust.phone + "<br>" + order_info.address).addClass('w3-container');
+     		$row.append($('<td>').append($cus));
+     		// 將4個td都接到tr裡，再appand tr到tbody
+     		$("#edit_order_table > tbody").append($row);
+     	});
+     } // end updateTable
+     /* 功能:向server刪除一筆訂單，並向server要新訂單列表重新load表格 */
+     function deleteOrder(id) {
+     	console.log(id);
+     	var data_object = {
+     		"id": id,
+     	};
+     	var data_string = JSON.stringify(data_object);
+     	$.ajax({
+     		type: "DELETE",
+     		url: "api/order.do",
+     		data: data_string,
+     		crossDomain: true,
+     		cache: false,
+     		dataType: 'json',
+     		timeout: 5000,
+     		success: function(response) {
+     			console.log(response.message);
+     			if (response.status == 200) {
+     				alert("good")
+     				calltableupdate()
+     			}
+     		},
+     		error: function() {
+     			alert("無法連線到伺服器！");
+     		}
+     	});
+     	location.reload();
+     	console.log('called deleteOrder(' + id + ')');
+     }
+     /* 功能:向server將一筆進行中訂單設為已完成，成功就前端更新(交給onclick處理) */
+     function completeOrder(id) {
+     	// 使用ajax向server把該訂單設為已完成
+     	// $.ajax({});
+     	console.log(id + " 已完成")
+     	return true;
+     }
+
+     function calltableupdate() {
+     	$.ajax({
+     		type: "GET",
+     		url: "api/order.do",
+     		data: "",
+     		crossDomain: true,
+     		cache: false,
+     		dataType: 'json',
+     		timeout: 200000,
+     		success: function(response) {
+     			if (response.status == 200000) {
+     				var data = response.response.data;
+     				console.log(data);
+     				updateTable(data);
+     			}
+     			// 當"進行中"按鈕點擊時，把server中的狀態改為complete，並更新前端按鈕介面
+     			$('.processing').on('click', function(event) {
+     				// 使用ajax向server把訂單改為complete
+     				flag_success = false;
+     				id = $(event.target).attr('id');
+     				flag_success = completeOrder(id);
+     				var data_object = {
+     					"id": id,
+     					"order_status": 0
+     				};
+     				var data_string = JSON.stringify(data_object);
+     				$.ajax({
+     					type: "PUT",
+     					url: "api/order.do",
+     					data: data_string,
+     					crossDomain: true,
+     					cache: false,
+     					dataType: 'json',
+     					timeout: 5000,
+     					success: function(response) {
+     						console.log(response.message);
+     						if (response.status == 200) {
+     							alert("good")
+     						}
+     					},
+     					error: function() {
+     						alert("無法連線到伺服器！");
+     					}
+     				});
+     				// 成功: 更新介面 > 狀態設成已完成
+     				if (flag_success) {
+     					$(event.target).html('已完成');
+     					$(event.target).css({
+     						'text-decoration': ''
+     					});
+     					$(event.target).removeClass('processing').addClass('complete');
+     				}
+     			});
+     		},
+     		error: function() {
+     			alert("無法連線到伺服器！");
+     		}
+     	});
+     }
+	</script> 
+</body>
+</html>
